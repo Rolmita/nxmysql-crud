@@ -1,4 +1,4 @@
-import Form from "@/components/Form"
+import ArticulosForm from "@/components/ArticulosForm"
 import { db } from "@/lib/mysql"
 import { deleteArticulo } from "@/lib/actions"
 
@@ -7,7 +7,7 @@ async function page({ searchParams }) {
   return (
     <div>
       <h3>Eliminar artículo {searchParams.id}</h3>
-      <Form action={deleteArticulo} title='Eliminar artículo' articulo={articulo} disabled={true} />
+      <ArticulosForm action={deleteArticulo} title='Eliminar artículo' articulo={articulo} disabled={true} />
     </div>
   )
 }
